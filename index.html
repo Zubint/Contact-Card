@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="descrption" content="">
+		<title>
+			Contact Card Project
+		</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="normalize%20v303.css">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> <!-- Jquery UI -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> <!-- Jquery UI -->
+		<script type="text/javascript">
+				$(document).ready(function(){
+
+						$(document).on('click', '#addcontent',function(){
+							var newHTML = "<div class='card'> <h1>" + $("#first_name").val() + " " + $("#last_name").val() + "</h1> <h4 class='description'>Click here to see the description</h4> <p class='contactDescription'>" + $("#description").val() +" </p></div> "
+
+							$("#cards").append(newHTML);
+							$("#first_name").val("");
+							$("#last_name").val("");
+							$("#description").val("");
+							return false;
+						});
+
+						$(document).on('click', '.description',function(){
+							$(this).siblings(".contactDescription").css({"visibility":"visible"});
+							return false;
+						});
+
+				});
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+				<form id="newContact">
+					<label for="first_name">First Name:
+						<input type="text" id="first_name">
+					</label>
+					<label for="last_name">Last Name:
+						<input type="text" id="last_name">
+					</label>
+						<textarea id="description" placeholder="Enter Description" rows="10" cols="4" wrap="hard"></textarea>
+					<input id="addcontent" type="submit" value="Add Contact Card">
+				</form>
+				<div id="cards">
+				</div>
+		</div>
+	</body>
+</html>

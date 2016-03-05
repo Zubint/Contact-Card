@@ -1,0 +1,76 @@
+* {
+	padding:0px;
+	margin:0px;
+}
+
+.wrapper{
+	width: 1000px;
+	margin: 45px auto;
+}
+
+.contactForm{
+	width: 95%;
+	display: inline-block;
+	background-color: blue;
+}
+
+#newContact{
+	display: inline-block;
+	width: 50%;
+}
+
+#newContact input[type="text"]{
+	width: 70%;
+	margin-left: 22px;
+	padding: 5px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+#newContact textarea{
+	width: 345px;
+	margin-left: 110px;
+	padding: 5px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	height: 75px;
+}
+
+#newContact label{
+	vertical-align: middle;
+	width: 25%;
+
+}
+
+#newContact input[type="submit"]{
+	margin-left: 110px;
+	padding: 10px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+div #cards{
+	display: inline-block;
+	width: 400px;
+	vertical-align: top;
+}
+
+div.card{
+	border: solid 2px red;
+	vertical-align: top;
+	margin-left: 120px;
+	margin-right: auto;
+	margin-top:10px;
+	padding: 10px;
+}
+
+
+div.card p{
+	margin-top: 15px;
+}
+
+.contactDescription{
+	visibility: hidden;
+}
